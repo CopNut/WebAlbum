@@ -1,0 +1,537 @@
+@-ms-viewport{
+	width: extend-to-zoom;
+	zoom: 1;
+}
+
+/*---------------------------general-setting-----------------------------*/
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family:sans-serif;
+	cursor: default;
+	-webkit-user-select: none;
+	background: -webkit-linear-gradient(top, #f2fbff 0%, #ffffff 64%) no-repeat;
+	background: -moz-linear-gradient(top, #f2fbff 0%, #ffffff 64%) no-repeat;
+	background: -ms-linear-gradient(top, #f2fbff 0%, #ffffff 64%) no-repeat;
+	background: linear-gradient(to bottom, #f2fbff 0%, #ffffff 64%) no-repeat;
+}
+
+h2{
+	display: inline;
+}
+
+h3, h4{
+	color: lightblue;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+div.box{
+	display:flex;
+	flex-wrap: wrap;
+}
+
+div.center{
+	justify-content: center;
+}
+
+div.around{
+	justify-content: space-around;
+}
+
+div.between{
+	justify-content: space-between;
+}
+
+div.querterEntry{
+	flex:0 0 25%;
+}
+
+div.halfEntry{
+	flex:0 0 50%;
+}
+
+div.entry{
+	flex:0 0 90%;
+}
+
+div.fullEntry{
+	flex:0 0 100%;
+}
+
+div.block{
+	display:block;
+}
+
+div.wrapper{
+	justify-content:center;
+}
+
+div.mainContent{
+	min-height: 500px;
+}
+
+div.footer{
+	margin-top:30px;
+	text-align: center;
+	color:white;
+	background-color:gray;
+	border-radius: 15px;
+}
+
+
+
+
+/*-----------------------------------login-and-enroll--------------------------------------*/
+
+form.form{
+	flex:0 0 60%;
+	align-self: center;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content: space-between;
+}
+
+form.form > label{
+	flex:0 0 100px;
+	max-width: 200px;
+	text-align:center;
+	height: 30px;
+	border-bottom: 1px solid #ccc;
+}
+
+label.blue{
+	background-color: lightblue;
+}
+
+label.pink{
+	background-color: pink;
+}
+
+form.form > input{
+	flex:1 1 80%;
+	height: 30px;
+	font-size: 20px;
+	border:none;
+	box-shadow: 0 0 3px gray;
+	cursor: default;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+form.form > b{
+	flex-basis:100%;
+	height: 30px;
+}
+
+form.form > input[type='submit']:hover{
+	background-color: lightgreen;
+}
+
+form.form > input:active{
+	box-shadow: 0 0 10px gray;
+}
+
+
+
+
+/*--------------------------------------------------select-album-------------------------------------------*/
+div.albumSelect{
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+div.albumSelect > label > input{
+	position: absolute;
+	opacity: 0;
+}
+
+div.albumSelect > label > input[type='radio']:checked + div + div{
+	background-color: lightgreen;
+	box-shadow: 0 0 50px lightgreen;
+}
+
+div.albumSelect > a > label > input{
+	position: absolute;
+	opacity: 0;
+}
+
+div.albumSelect > a > label > input[type='radio']:checked + div + div{
+	background-color: lightgreen;
+	box-shadow: 0 0 50px lightgreen;
+}
+
+div.album{
+	cursor: pointer;
+	margin:10px;
+	text-align: center;
+	background-color: rgba(0,0,0,0.05);
+	-webkit-transition: background-color 0.3s;
+	-o-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+	border-radius: 10px;
+}
+
+div.album:hover{
+	background-color: lightgreen;
+}
+
+div.album:active{
+	box-shadow: 0 0 5px gray;
+}
+
+div.albumCover{
+	display: block;
+	height: 150px;
+	width:240px;
+	overflow-y: hidden;
+}
+
+img.cover{
+	width: 230px;
+	border-radius: 10px;
+}
+
+
+
+
+/*-----------------------------------------------select-image-----------------------------------------*/
+div.imageSelect{
+	justify-content: center;
+}
+
+div.imageSelect > label{
+	display: block;
+	height: 50px;
+	flex: 0 0 150px;
+	background-color: rgba(0,0,0,0.05);
+	-webkit-transition: background-color 0.3s;
+	-o-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+	margin:10px;
+	cursor: pointer;
+	text-align:center;
+	line-height: 50px;
+}
+
+div.imageSelect > label:hover{
+	background-color: lightgreen;
+}
+
+div.imageSelect > label:active{
+	box-shadow: 0 0 5px gray;
+}
+
+div.imageSelect > label:visited{
+	background-color: lightgreen;
+}
+
+div.imageSelect > label > input.files{
+	display: none;
+}
+
+div.imageSelect > label > input.submit{
+	display: none;
+}
+
+#uploadButton{
+	display: none;
+}
+
+
+
+
+/*----------------------------------------------upload-result----------------------------------------*/
+div.uploadResult{
+	min-height: 200px;
+	justify-content: space-around;
+}
+
+div.uploadResult > p{
+	flex:0 0 300px;
+	text-align:center;
+	background-color: rgba(0,0,0,0.05);
+}
+
+
+
+
+
+/*-----------------------------function-tag-------------------------------*/
+ul{
+	list-style: none;
+	display:flex;
+	align-items: flex-end;
+}
+
+li{
+	flex:1 1;
+}
+
+a.tag{
+	display: block;
+	height: 30px;
+	background-color: #CCC;
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	text-align: center;
+	text-decoration: none;
+	line-height: 30px;
+	color: white;
+	-webkit-transition: background-color 0.3s;
+	-o-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+}
+
+
+a.tag:active{
+	box-shadow:inset 0 1px 2px gray;
+}
+
+a.pink:hover{
+	background-color: pink;
+}
+
+a.green:hover{
+	background-color: lightgreen;
+}
+
+a.blue:hover{
+	background-color: lightblue;
+}
+
+/*----------------------------------------------page-tage----------------------------------------*/
+div.pageBar{
+	margin-top: 20px;
+}
+
+a.pageTag{
+	display: block;
+	height: 30px;
+	background-color: #CCC;
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+	text-align: center;
+	text-decoration: none;
+	line-height: 30px;
+	color: white;
+	-webkit-transition: background-color 0.3s;
+	-o-transition: background-color 0.3s;
+	transition: background-color 0.3s;
+}
+
+a.pageTag:active{
+	box-shadow:inset 0 1px 2px gray;
+}
+
+
+
+/*------------------------------img-block-----------------------------*/
+div.filename{
+	margin-top: 30px;
+	color: lightblue;
+}
+
+div.imgBlock{
+	flex:3 0 60%;
+	flex-direction: column;
+}
+
+div.img{
+	padding-top: 5px;
+}
+
+div.img > img{
+	margin:5%,0,5%,0;
+	max-width: 90%;
+	border-radius: 1em;
+	border:1px dashed #ccc;
+}
+
+div.control{
+	padding-left: 10px;
+	padding-right: 30px;
+}
+
+
+
+
+/*------------------------------comment-block---------------------------*/
+div.commentBlock{
+	flex: 1 1 20%;
+	min-width: 250px;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+div.commentContainer{
+	flex:1 1 150px;
+	overflow: auto;
+	justify-content: center;
+}
+
+div.commentContainer > div{
+	flex: 0 0 90%;
+	margin-bottom: 10px;
+}
+
+p.name{
+	line-height: 30px;
+	color: blue;
+	font-size: 28px;
+	height: 30px;
+	align-self: flex-end;
+}
+
+p.content{
+	background-color: rgba(0,0,255,0.1);
+	opacity: 50%;
+	padding-left: 10px;
+	margin-bottom: 5px;
+	height: 100px;
+	align-self: flex-start;
+}
+
+div.writeComment{
+}
+
+
+div.writeComment > textarea{
+	border:none;
+	box-shadow: inset 0 0 10px #ccc;
+	width: 100%;
+	height: 100px;
+	font-family: sans-serif;
+}
+
+div.commentSubmit{
+	font-family: sans-serif;
+	font-size: 16px;
+	cursor: pointer;
+	width: 40px;
+	height: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 200, 0, 0.7);
+	color: white;
+	text-align: center;
+}
+
+div.commentSubmit:active{
+	box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.3);
+	font-size: 15.5px;
+}
+
+div.deleteCommentButton{
+	float: right;
+}
+
+div.deleteCommentButton > div{
+	cursor: pointer;
+	width: 40px;
+	height: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+	background-color: rgba(255, 0, 0, 0.7);
+	color: white;
+	text-align: center;
+}
+
+div.deleteCommentButton > div:active{
+	box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.3);
+	font-size: 15.5px;
+}
+
+
+
+/*-------------------------------------------ios-switch-button-------------------------------------*/
+label.switchButton{
+	cursor: pointer;
+	
+}
+
+input[type='checkbox']{
+	opacity: 0;
+	position: absolute;
+}
+
+input[type='checkbox'] + div{
+	display: inline-flex;
+	width: 40px;
+	height: 20px;
+	border: 1px solid rgba(0,0,0,.4);
+	border-radius: 10px;
+	background-color: rgba(0, 0, 0, 0.1);
+	-webkit-transition-duration: .4s;
+	-webkit-transition-property: background-color, box-shadow;
+	box-shadow: inset 0 0 0 0px rgba(0,0,0,0.4);
+}
+
+input[type='checkbox']:checked + div{
+	width: 40px;
+	background-position: 0 0;
+	background-color: #00e359;
+	border: 1px solid rgba(0, 162, 63,1);
+	box-shadow: inset 0 0 0 10px rgba(0,227,89,1);
+}
+
+input[type="checkbox"] + div > div{
+	float: left;
+	width: 18px;
+	height: 18px;
+	border-radius: inherit;
+	background: #ffffff;
+	-webkit-transition-timing-function: cubic-bezier(.54,1.85,.5,1);
+	-webkit-transition-duration: 0.4s;
+	-webkit-transition-property: transform, background-color, box-shadow;
+	-moz-transition-timing-function: cubic-bezier(.54,1.85,.5,1);
+	-moz-transition-duration: 0.4s;
+	-moz-transition-property: transform, background-color;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), 0px 0px 0 1px rgba(0, 0, 0, 0.4);
+	pointer-events: none;
+	margin-top: 1px;
+	margin-left: 1px;
+}
+
+input[type="checkbox"]:checked + div > div
+{
+	-webkit-transform: translate3d(20px, 0, 0);
+	-moz-transform: translate3d(20px, 0, 0);
+	background-color: #ffffff;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 162, 63,1);
+}
+
+
+
+
+/*--------------------------------------------delete-button---------------------------------------------------*/
+.deleteAlbumButton, .deleteImageButton, .deleteCommentButton{
+	float: right;
+}
+
+.deleteAlbumButton > div, .deleteImageButton > div, .deleteCommentButton > div{
+	cursor: pointer;
+	width: 40px;
+	height: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+	background-color: rgba(255, 0, 0, 0.7);
+	color: white;
+	text-align: center;
+}
+
+.deleteAlbumButton > div:active, .deleteImageButton > div:active, .deleteCommentButton > div:active{
+	box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.3);
+	font-size: 15.5px;
+}
